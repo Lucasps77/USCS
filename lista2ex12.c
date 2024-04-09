@@ -14,9 +14,9 @@ int main()
 
 int maior(int a, int b){
      
-    int soma = 0;
+    int maior1 = 0;
      
-     soma = a + b;
+     maior1 = a + b;
     
-     return soma;
+     return maior1;
 }
