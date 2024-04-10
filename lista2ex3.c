@@ -1,6 +1,6 @@
 #include <stdio.h>
 int primo(int num);
-int somaPrimos(int limite);
+int somaPrimos(int maximo);
 int main() {
     int numero;
 
@@ -33,11 +33,11 @@ int primo(int num) {
 
     return 1; 
 }
-int somaPrimos(int numeros) {
+int somaPrimos(int maximo) {
     int soma = 0;
     int i;
 
-    for (i = 2; i <= numeros; i++) {
+    for (i = 2; i <= maximo; i++) {
         if (primo(i)) {
             soma += i;
         }
