@@ -4,7 +4,7 @@ int main()
 {
     int i;
     int vetor[6];
-    int vector[6];
+   
     
     
     for(int i = 0; i < 6; i++){
