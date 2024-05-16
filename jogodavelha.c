@@ -46,7 +46,7 @@ int menu(){
 }
 // função para jogar
 int jogarJogo(){
-   int pontos = 0;
+   
    iniciarTabuleiro();
    mostrarTabuleiro();
 
