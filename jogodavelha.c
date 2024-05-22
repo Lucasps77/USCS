@@ -1,6 +1,6 @@
-#include <stdio.h>// Bibliotecas de C
-#include <stdlib.h>// Bibliotecas de C
-#include <string.h>// Bibliotecas de C
+#include <stdio.h>// Blibliotecas de C
+#include <stdlib.h>// Blibliotecas de C
+#include <string.h>// Blibliotecas de C
 //protótipo das funções
 int menu();
 int jogarJogo();
@@ -13,12 +13,13 @@ int empate();
 int vencedor();
 
 int main(){
+
 menu();
 
     return 0;
 }
 
-//Menu interativo
+//Menu para interativo
 int menu(){
    
    int opcao;
@@ -46,7 +47,7 @@ int menu(){
 }
 // função para jogar
 int jogarJogo(){
-   
+   int pontos = 0;
    iniciarTabuleiro();
    mostrarTabuleiro();
 
@@ -80,7 +81,7 @@ int sairAgora(){
     printf("Digite s(sim) / n(não)\n");
     scanf("%s", op);
 
-//Verificar opção escolhida
+//Verificar a opção escolhida
 if (strcmp(op, "n") == 0 || strcmp(op, "não") == 0 || strcmp(op, "N") == 0 || strcmp(op, "Não") == 0) {
         menu();
     }
@@ -122,20 +123,20 @@ void mostrarTabuleiro(){
  int jogada(char jogador){
     int linha, coluna;
    
-    printf("Digite a linha (1 a 3) e a coluna (1 a 3) separadamente\n");
+    printf("Digite a linha (1 a 3) e a coluna (1 a 3) separadamente\n"); 
     scanf("%d %d", &linha, &coluna);
-
-    if(linha < 1 || linha > 3 || coluna < 1 || coluna > 3 || tabuleiro[linha][coluna] != ' '){
-        printf("jogada invalida\n");
-    }
 
     linha--;
     coluna--;
 
-   if(tabuleiro[linha][coluna] != ' '){
-    printf("Jogada invalida: posição ja foi ocupada.\n");
+    if(linha < 0 || linha > 2 || coluna < 0 || coluna > 2){
+        printf("jogada invalida\n");
+        return 0;
+    } else if(tabuleiro[linha][coluna] != ' '){
+        printf("Jogada invalida: posição ja foi ocupada.\n");
         return 0;
     }
+        
      
      tabuleiro[linha][coluna] = jogador;
      return 1;
@@ -167,3 +168,5 @@ int vencedor(){
 
     return 0; // Sem vencedor;
 }
+
+
