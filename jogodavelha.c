@@ -1,6 +1,6 @@
-#include <stdio.h>// Blibliotecas de C
-#include <stdlib.h>// Blibliotecas de C
-#include <string.h>// Blibliotecas de C
+#include <stdio.h>// Bibliotecas de C
+#include <stdlib.h>// Bibliotecas de C
+#include <string.h>// Bibliotecas de C
 //protótipo das funções
 int menu();
 int jogarJogo();
@@ -19,7 +19,7 @@ menu();
     return 0;
 }
 
-//Menu para interativo
+//Menu interativo
 int menu(){
    
    int opcao;
@@ -125,6 +125,7 @@ void mostrarTabuleiro(){
    
     printf("Digite a linha (1 a 3) e a coluna (1 a 3) separadamente\n"); 
     scanf("%d %d", &linha, &coluna);
+     
 
     linha--;
     coluna--;
